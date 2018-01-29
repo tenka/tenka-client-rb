@@ -20,11 +20,11 @@ Gem::Specification.new { |s|
 	EOS
 	s.homepage = "https://github.com/tenka/tenka-client-ruby"
 
-	s.version = '1.0.1'
+	s.version = '1.0.2'
 	s.platform = Gem::Platform::RUBY
 	s.required_ruby_version = '>= 2.2.0'
 	s.license = 'MIT'
 	[
-		['json', '~> 0'],
+		['json', '~> 2'],
 	].each { |a| s.add_runtime_dependency *a }
 }
