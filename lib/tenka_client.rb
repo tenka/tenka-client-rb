@@ -1,4 +1,4 @@
-# Copyright © 2017 Rekka Labs (https://rekka.io/)
+# Copyright © 2017-2018 Rekka Labs (https://rekka.io/)
 # See LICENSE for licensing information.
 
 %w(
@@ -162,7 +162,7 @@ module Tenka
 		def server_uri
 			# Under normal circumstances, `host` shouldn't change (just start
 			# a new client).
-			@_server_uri ||= URI("#{ssl ? 'https' : 'http'}#{host}/")
+			@_server_uri ||= URI("http#{ssl ? 's' : ''}://#{host}/")
 		end
 
 		def h2query h

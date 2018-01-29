@@ -12,7 +12,7 @@ Gem::Specification.new { |s|
 	s.extensions << 'ext/extconf.rb' if File.exist? 'ext/extconf.rb'
 	Dir['bin/*'].map(&File.method(:basename)).map(&s.executables.method(:<<))
 
-	s.name = 'tenka_client'
+	s.name = 'tenka'
 	s.summary = "A client for Tenka's REST API."
 	s.description = <<-EOS.gsub(/^\t+/, '')
 		Tenka is a REST API that lets you do GIS operations.  It makes it easy
@@ -24,5 +24,7 @@ Gem::Specification.new { |s|
 	s.platform = Gem::Platform::RUBY
 	s.required_ruby_version = '>= 2.2.0'
 	s.license = 'MIT'
-	%w(json).each &s.method(:add_dependency)
+	[
+		['json', '~> 0'],
+	].each { |a| s.add_runtime_dependency *a }
 }
