@@ -20,7 +20,7 @@ Gem::Specification.new { |s|
 	EOS
 	s.homepage = "https://github.com/tenka/tenka-client-ruby"
 
-	s.version = '1.0.0'
+	s.version = '1.0.1'
 	s.platform = Gem::Platform::RUBY
 	s.required_ruby_version = '>= 2.2.0'
 	s.license = 'MIT'
